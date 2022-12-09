@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <androidx.camera.view.PreviewView
+        android:id="@+id/viewFinder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/cameraPreview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@null"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/tglCameraSwitch"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="15dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_switch_camera"
+        app:layout_constraintBottom_toBottomOf="@id/camera_capture_button"
+        app:layout_constraintEnd_toStartOf="@+id/camera_capture_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/camera_capture_button"
+        app:tint="@color/white" />
+
+    <ImageView
+        android:id="@+id/tglCameraCancel"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="15dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_clear"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/camera_capture_button"
+        app:layout_constraintEnd_toStartOf="@+id/camera_capture_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/camera_capture_button"
+        app:tint="@color/white" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/camera_capture_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="center"
+        android:src="@drawable/ic_camera"
+        app:backgroundTint="@color/white"
+        app:elevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:maxImageSize="30dp"
+        app:tint="@color/white" />
+
+    <ToggleButton
+        android:id="@+id/tglCameraTorch"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/custom_button_torch"
+        android:checked="false"
+        android:text=""
+        android:textOff=""
+        android:textOn=""
+        app:layout_constraintBottom_toBottomOf="@+id/camera_capture_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/camera_capture_button"
+        app:layout_constraintTop_toTopOf="@id/camera_capture_button" />
+
+    <ImageView
+        android:id="@+id/tglCameraSubmit"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="15dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_check"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/camera_capture_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/camera_capture_button"
+        app:layout_constraintTop_toTopOf="@id/camera_capture_button"
+        app:tint="@color/white" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
